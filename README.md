@@ -1,24 +1,50 @@
-# README
+# usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column     | Type   | Options      |
+| ---------- | -----  | ------------ |
+| text       | string | null: false  |
+| email      | string | null: false  |
+| password   | string | null: false  |
+| last_name  | string | null: false  |
+| first_name | string | null: false  |
+| birth_date | ------ | ------------ |
 
-Things you may want to cover:
+# itemsテーブル
 
-* Ruby version
+| Column         | Type           | Options      |
+| -------------- | -------------- | ------------ |
+| items_name     | string         | null: false  |
+| items_text     | text           | null: false  |
+| items_category | references     | null: false  |
+| items_status   | string         | null: false  |
+| items_image    | Active Storage | null: false  |
 
-* System dependencies
+# item_userテーブル
 
-* Configuration
+| Column                  | Type        | Options      |
+| ----------------------- | ----------- | ------------ |
+| item_shipping           | Active Hash | null: false  |
+| item_prefecture         | Active Hash | null: false  |
+| item_scheduled_delivery | Active Hash | null: false  |
+| item_price              | Active Hash | null: false  |
+| price_content           | Active Hash | null: false  |
 
-* Database creation
+# user_addressesテーブル
 
-* Database initialization
+| Column       | Type       | Options      |
+| ------------ | ---------- | ------------ |
+| postal_code  | string     | null: false  |
+| prefecture   | string     | null: false  |
+| city         | string     | null: false  |
+| address      | string     | null: false  |
+| building     | string     | null: false  |
+| phone_number | string     | null: false  |
 
-* How to run the test suite
+# ordersテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Column         | Type       | Options      |
+| -------------- | ---------- | ------------ |
+| card_number    | string     | null: false  |
+| card_exp_month | string     | null: false  |
+| card_exp_year  | string     | null: false  |
+| card_cvc       | string     | null: false  |
