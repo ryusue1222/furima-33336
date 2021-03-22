@@ -12,7 +12,6 @@
 | birthday           | date   | null: false               |
 
 # アソシエーション
-has_many: item_users
 has_one: user_address
 has_many: items, through: :item_user
 
@@ -44,6 +43,7 @@ has_many: users, through: :item_user
 # アソシエーション
 belongs_to: user
 belongs_to: item
+has_one: user_address
 
 # user_addressesテーブル
 
@@ -55,7 +55,7 @@ belongs_to: item
 | address       | string     | null: false  |
 | building      | string     |              |
 | phone_number  | string     | null: false  |
-| item          | references | null: false  |
+| item_user     | references | null: false  |
 
 # アソシエーション
-belongs_to: user
+belongs_to: item_user
