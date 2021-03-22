@@ -12,7 +12,7 @@
 | birthday           | date   | null: false               |
 
 # アソシエーション
-has_one: item_user
+has_many: item_user
 has_many: items, through: :item_user
 
 # itemsテーブル
@@ -27,14 +27,13 @@ has_many: items, through: :item_user
 | prefecture_id              | integer        | null: false                    |
 | scheduled_delivery_id      | integer        | null: false                    |
 | price_id                   | integer        | null: false                    |
-| price_content_id           | integer        | null: false                    |
 | user                       | references     | null: false, foreign_key: true |
 
 # アソシエーション
 has_one: item_user
 belongs_to: user
 
-# item_userテーブル
+# item_usersテーブル
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
@@ -48,15 +47,15 @@ has_one: user_address
 
 # user_addressesテーブル
 
-| Column        | Type       | Options      |
-| ------------- | ---------- | ------------ |
-| postal_code   | string     | null: false  |
-| prefecture_id | integer    | null: false  |
-| city          | string     | null: false  |
-| address       | string     | null: false  |
-| building      | string     |              |
-| phone_number  | string     | null: false  |
-| item_user     | references | null: false  |
+| Column        | Type       | Options                         |
+| ------------- | ---------- | ------------------------------- |
+| postal_code   | string     | null: false                     |
+| prefecture_id | integer    | null: false                     |
+| city          | string     | null: false                     |
+| address       | string     | null: false                     |
+| building      | string     |                                 |
+| phone_number  | string     | null: false                     |
+| item_user     | references | null: false, foreign_key: true  |
 
 # アソシエーション
 belongs_to: item_user
