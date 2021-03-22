@@ -12,7 +12,7 @@
 | birthday           | date   | null: false               |
 
 # アソシエーション
-has_many: item_user
+has_many: item_users
 has_many: items, through: :item_user
 
 # itemsテーブル
