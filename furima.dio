@@ -37,7 +37,7 @@
                 <mxCell id="164" value="prefecture" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="162" vertex="1">
                     <mxGeometry y="56" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="165" value="city&#10;&#10;addresses&#10;&#10;building&#10;&#10;phone_number&#10;&#10;item" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="162" vertex="1">
+                <mxCell id="165" value="city&#10;&#10;addresses&#10;&#10;building&#10;&#10;phone_number&#10;&#10;item_user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="162" vertex="1">
                     <mxGeometry y="86" width="160" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="168" value="" style="endArrow=ERmany;html=1;rounded=0;exitX=0.506;exitY=1.019;exitDx=0;exitDy=0;exitPerimeter=0;endFill=0;startArrow=ERmany;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="148" edge="1" target="185">

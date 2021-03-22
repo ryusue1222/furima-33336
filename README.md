@@ -12,26 +12,27 @@
 | birthday           | date   | null: false               |
 
 # アソシエーション
-has_one: user_address
+has_one: item_user
 has_many: items, through: :item_user
 
 # itemsテーブル
 
-| Column                     | Type           | Options      |
-| -------------------------- | -------------- | ------------ |
-| name                       | string         | null: false  |
-| text                       | text           | null: false  |
-| category                   | references     | null: false  |
-| status                     | string         | null: false  |
-| shipping_id                | integer        | null: false  |
-| prefecture_id              | integer        | null: false  |
-| scheduled_delivery_id      | integer        | null: false  |
-| price_id                   | integer        | null: false  |
-| price_content_id           | integer        | null: false  |
+| Column                     | Type           | Options                        |
+| -------------------------- | -------------- | ------------------------------ |
+| name                       | string         | null: false                    |
+| text                       | text           | null: false                    |
+| category_id                | integer        | null: false                    |
+| status_id                  | integer        | null: false                    |
+| shipping_id                | integer        | null: false                    |
+| prefecture_id              | integer        | null: false                    |
+| scheduled_delivery_id      | integer        | null: false                    |
+| price_id                   | integer        | null: false                    |
+| price_content_id           | integer        | null: false                    |
+| user                       | references     | null: false, foreign_key: true |
 
 # アソシエーション
-has_many: item_users
-has_many: users, through: :item_user
+has_one: item_user
+belongs_to: user
 
 # item_userテーブル
 
