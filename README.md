@@ -57,5 +57,5 @@ has_one: user_address
 | phone_number  | string     | null: false                     |
 | item_user     | references | null: false, foreign_key: true  |
 
-# アソシエーション
-belongs_to: item_user
+# アソシエーションra
+belongs_to: item_userstrin
