@@ -12,8 +12,8 @@
 | birthday           | date   | null: false               |
 
 # アソシエーション
-has_many: item_users
-has_many: items, through: :item_user
+- has_many: item_users
+- has_many: items, through: :item_user
 
 # itemsテーブル
 
@@ -30,8 +30,8 @@ has_many: items, through: :item_user
 | user                       | references     | null: false, foreign_key: true |
 
 # アソシエーション
-has_one: item_user
-belongs_to: user
+- has_one: item_user
+- belongs_to: user
 
 # item_usersテーブル
 
@@ -41,9 +41,9 @@ belongs_to: user
 | item         | references | null: false, foreign_key: true |
 
 # アソシエーション
-belongs_to: user
-belongs_to: item
-has_one: user_address
+- belongs_to: user
+- belongs_to: item
+- has_one: user_address
 
 # user_addressesテーブル
 
@@ -58,4 +58,4 @@ has_one: user_address
 | item_user     | references | null: false, foreign_key: true  |
 
 # アソシエーションra
-belongs_to: item_userstrin
+- belongs_to: item_userstrin
