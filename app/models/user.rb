@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    @kanji = /\A[ぁ-んァ-ン一-龥々]+\z/
+    @kanji = /\A[ぁ-んァ-ン一-龥々ー]+\z/
     @kana = /\A[ァ-ヶー－]+\z/
     validates :nickname, length: { maximum: 40 }
     validates :last_name, format: {with: @kanji}
