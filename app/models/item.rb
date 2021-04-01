@@ -5,6 +5,7 @@ class Item < ApplicationRecord
   belongs_to :scheduled_delivery
   belongs_to :shipping
   belongs_to :status
+  has_one_attached :image
 
   #空の投稿を保存できないようにする
   validates :title, :text, presence: true
