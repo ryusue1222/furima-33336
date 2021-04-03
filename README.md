@@ -58,4 +58,4 @@
 | item_user     | references | null: false, foreign_key: true  |
 
 # アソシエーションra
-- belongs_to: item_userstrin
+- belongs_to: item_users
