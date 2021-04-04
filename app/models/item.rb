@@ -16,10 +16,12 @@ class Item < ApplicationRecord
   end
 
   #ジャンルの選択が「--」の時は保存できないようにする
-  validates :category_id, numericality: { other_than: 1 } 
-  validates :status_id, numericality: { other_than: 1 }
-  validates :shipping_id, numericality: { other_than: 1 }
-  validates :prefecture_id, numericality: { other_than: 1 }
-  validates :scheduled_delivery_id, numericality: { other_than: 1 }
+  with_options numericality: { other_than: 1 } do
+    validates :category_id
+    validates :status_id
+    validates :shipping_id
+    validates :prefecture_id
+    validates :scheduled_delivery_id
+  end
   validates :price_id, numericality: {greater_than: 300, less_than: 9999999}, format: {with: /\A[0-9]+\z/}
 end
