@@ -9,7 +9,11 @@ class Item < ApplicationRecord
   belongs_to :user
 
   #空の投稿を保存できないようにする
-  validates :name, :text, presence: true
+  with_options presence: true do
+    validates :name, length: { maximum: 40 }
+    validates :text, length: { maximum: 1000 }
+    validates :image
+  end
 
   #ジャンルの選択が「--」の時は保存できないようにする
   validates :category_id, numericality: { other_than: 1 } 
@@ -17,5 +21,5 @@ class Item < ApplicationRecord
   validates :shipping_id, numericality: { other_than: 1 }
   validates :prefecture_id, numericality: { other_than: 1 }
   validates :scheduled_delivery_id, numericality: { other_than: 1 }
-  validates :price_id, numericality: {greater_than: 300, less_than: 99999999}, format: {with: /\A[0-9]+\z/}
+  validates :price_id, numericality: {greater_than: 300, less_than: 9999999}, format: {with: /\A[0-9]+\z/}
 end
